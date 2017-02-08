@@ -49,6 +49,7 @@ public class IndexFibonacciMinPQ<Key> implements Iterable<Integer>
 																					// operation
 
 	// Represents a Node of a tree
+	@SuppressWarnings("hiding")
 	private class Node<Key>
 	{
 		Key key; // Key of the Node
@@ -69,6 +70,7 @@ public class IndexFibonacciMinPQ<Key> implements Iterable<Integer>
 	 * @throws java.lang.IllegalArgumentException
 	 *             if {@code N < 0}
 	 */
+	@SuppressWarnings("unchecked")
 	public IndexFibonacciMinPQ(int N)
 	{
 		if (N < 0)
@@ -90,6 +92,7 @@ public class IndexFibonacciMinPQ<Key> implements Iterable<Integer>
 	 * @throws java.lang.IllegalArgumentException
 	 *             if {@code N < 0}
 	 */
+	@SuppressWarnings("unchecked")
 	public IndexFibonacciMinPQ(Comparator<Key> C, int N)
 	{
 		if (N < 0)
@@ -594,6 +597,7 @@ public class IndexFibonacciMinPQ<Key> implements Iterable<Integer>
 	// default Comparator
 	private class MyComparator implements Comparator<Key>
 	{
+		@SuppressWarnings("unchecked")
 		@Override
 		public int compare(Key key1, Key key2)
 		{
