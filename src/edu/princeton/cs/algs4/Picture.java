@@ -365,7 +365,11 @@ public final class Picture implements ActionListener {
             save(chooser.getDirectory() + File.separator + chooser.getFile());
         }
     }
-
+    
+    public BufferedImage getBufferedImage()
+    {
+    	return image;
+    }
 
    /**
      * Unit tests this {@code Picture} data type.
